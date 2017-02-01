@@ -16,3 +16,7 @@
 - **InheritanceAndPolymorfism**: basic example of inheritance and polymorfism.
 
 - **Lesson2**: review of interfaces, inheritance and polymorfism.
+
+- **L2Activity2**: complete exercise about topics seen in _Lesson2_.
+
+- **L2Activity3**: another exercise using topics from _Lesson2_.

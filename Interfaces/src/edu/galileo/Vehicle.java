@@ -5,10 +5,13 @@ package edu.galileo;
  */
 public interface Vehicle {
     /*
-     * Defines two methods to identify the object
-     * that is instantiated with the interface.
+     * DECLARE (not DEFINE) two methods to identify the
+     * object that is instantiated with the interface.
+     *
+     * The "Public" modifier in the following methods is
+     * redundant, so, can be avoided.
      */
 
-    public String getTransportType();
-    public boolean hasWheels();
+    String getTransportType();
+    boolean hasWheels();
 }

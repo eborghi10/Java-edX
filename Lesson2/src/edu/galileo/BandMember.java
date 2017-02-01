@@ -14,8 +14,10 @@ public class BandMember extends Human implements Vocalist, Guitarist{
         super(name);
     }
 
+    @Override
     public void printName() {
-        System.out.println("Band Member " + this.name);
+        System.out.print("Band Member ");
+        super.printName();
     }
 
     public void sing() {

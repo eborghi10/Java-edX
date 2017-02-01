@@ -4,8 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Human john = new Human("john");
-        // louis uses polymorfism
-        Human louis = new BandMember("louis");
+        Human louis = new BandMember("louis");  // polymorphism
 
         BandMember jack = new BandMember("jack");
 

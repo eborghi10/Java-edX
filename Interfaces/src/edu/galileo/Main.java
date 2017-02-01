@@ -1,12 +1,14 @@
 package edu.galileo;
 
 /*
- * INTERFACES are used to ensure that the class who
- * implements it, contains all of the functionality
- * required by it.
+ * INTERFACES are the capabilities of the class who
+ * IMPLEMENTS it.
  *
- * It means that it must have all of the methods
- * defined in the interface within the class' body.
+ * The best manner of know when to use interfaces, is
+ * renaming this interfaces (aka capabilities) to
+ * something like:
+ * - Drivable (or any adjective ended in "-able")
+ * - CanDrive (verbs started with "Can")
  *
  */
 
@@ -17,5 +19,6 @@ public class Main {
 
         System.out.println("Taxi has wheels? " + taxi.hasWheels()
                 + ", Number of wheels: " + taxi.getNumberOfWheels());
+        System.out.println("Transport type: " + taxi.getTransportType());
     }
 }

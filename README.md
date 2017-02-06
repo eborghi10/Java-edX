@@ -39,3 +39,7 @@
 - **SimpleArray**: assigning and printing one-dimensional arrays.
 
 - **MultiArray**: using multi-dimensional arrays.
+
+- **ArrayList**: exercising with a list of arrays.
+
+- **HashMaps**: implementation of _dictionaries_-like data types in Java.

@@ -43,3 +43,13 @@
 - **ArrayList**: exercising with a list of arrays.
 
 - **HashMaps**: implementation of _dictionaries_-like data types in Java.
+
+- **SOLID/SingleResponsibility**: example of an implementation of the SOLID principle _Single Resposibility_.
+
+- **SOLID/OpenClosed**: example of the _Open Closed_ SOLID principle.
+
+- **SOLID/InterfaceSegregation**: example of the _Interface Segregation_ SOLID principle.
+
+- **SOLID/DependencyInversion**: example of the _Dependency Inversion_ SOLID principle.
+
+- **SOLID/LiskovSubstitution**: example of the _Liskov's Substitution_ SOLID principle.

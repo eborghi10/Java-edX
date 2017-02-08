@@ -62,6 +62,6 @@ ___
 
 - **BufferReaders**: similar to the previous exercise but it's more efficient because uses buffers.
 
-- **ScannerFile**: Java implementation of fileIO but more human-likely.
+- **ScannerFile**: Java implementation of file IO but more human-likely.
 
-- 
+- **SerializeObject**: Saves objects on files.

@@ -22,6 +22,8 @@
 
 - **InheritanceAndPolymorfism**: basic example of inheritance and polymorfism.
 
+___
+
 - **Lesson2**: review of interfaces, inheritance and polymorfism.
 
 - **L2Activity2**: complete exercise about topics seen in _Lesson2_.
@@ -65,3 +67,15 @@ ___
 - **ScannerFile**: Java implementation of file IO but more human-likely.
 
 - **SerializeObject**: Saves objects on files.
+
+___
+
+- **L3Activity1**: Make a list of lists or hashmap to classify the toys.
+Then sort the list of lists or hashmap ascendingly and print each value.
+
+- **L3Activity2**: Find duplicate values of an array and remove them.
+Then, print the new array without the duplicated values.
+
+- **L3Acitivity4**: practice file IO functionalities.
+
+- **L3Activity5**: practice SOLID principles.

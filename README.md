@@ -44,6 +44,8 @@ ___
 
 - **ArrayList**: exercising with a list of arrays.
 
+- **ArrayListTest**: more complex example of array lists, similar to the used in _L3Activity5_.
+
 - **HashMaps**: implementation of _dictionaries_-like data types in Java.
 
 ___

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class L3Activity5 {
@@ -50,7 +51,7 @@ public class L3Activity5 {
                         dishElement.setAccompaniments(newLine);
                         break;
                     case 4 :
-                        dishElement.setPrice(Double.parseDouble(newLine.replace("$","")));
+                        dishElement.setPrice(newLine);
                         break;
                     default :
                         cnt = 0;
@@ -75,7 +76,7 @@ public class L3Activity5 {
                         drinkElement.setName(newLine);
                         break;
                     case 2 :
-                        drinkElement.setPrice(Double.parseDouble(newLine.replace("$","")));
+                        drinkElement.setPrice(newLine);
                         break;
                     default :
                         cnt = 0;
@@ -103,7 +104,7 @@ public class L3Activity5 {
                         dessertElement.setDescription(newLine);
                         break;
                     case 3 :
-                        dessertElement.setPrice(Double.parseDouble(newLine.replace("$","")));
+                        dessertElement.setPrice(newLine);
                         break;
                     default :
                         cnt = 0;
@@ -116,10 +117,38 @@ public class L3Activity5 {
 
             ////////////////////////////////////////////////////////////////////
 
-            ArrayList<Combo> comboList = new ArrayList<>(20);
+            System.out.println("Menu");
+            System.out.println("\n\tMain Dishes");
+            for (MainDish mainDishItem : mainDishList) {
+                System.out.print(mainDishItem.toString());
+            }
+            System.out.println("\n\n\tDrinks");
+            for (Drink drinkItem : drinkList) {
+                System.out.print(drinkItem.toString());
+            }
+            System.out.println("\n\n\tDessert");
+            for (Dessert dessertItem : dessertList) {
+                System.out.print(dessertItem.toString());
+            }
 
+            ////////////////////////////////////////////////////////////////////
+
+            ArrayList<Combo> comboList = new ArrayList<>(20);
+            Random r = new Random();
+
+            for (int i = 0; i < 20; i++) {
+                Combo temp = new Combo(
+                        mainDishList.get( r.nextInt(mainDishList.size()) ),
+                        drinkList.get( r.nextInt(drinkList.size()) ),
+                        dessertList.get( r.nextInt(dessertList.size()) ),
+                        5.00 * r.nextDouble()
+                );
+                comboList.add(temp);
+            }
+
+            System.out.print("\n\nCombos with special discount:");
             for (Combo c : comboList) {
-                c.
+                System.out.print(c.toString());
             }
 
         } catch (IOException e) {
@@ -133,32 +162,43 @@ public class L3Activity5 {
 }
 
 abstract class Food {
+
     private String name;
     private double price;
-    public Food() {
-        ;
-    }
 
     void setName(String name) {
         this.name = name;
     }
 
-    void setPrice(double price) {
-        this.price = price;
+    final void setPrice(String price) {
+        this.price = Double.parseDouble(price.replace("$",""));
     }
 
-    public abstract String toString();
+    final public String nameToString() {
+        return ("\n\t\t" + this.getName());
+    }
+
+    final public String priceToString() {
+        return ("\n\t\t\t$" + String.format("%.2f", this.getPrice()));
+    }
+
+    public String getName() { return this.name; }
+
+    public double getPrice() { return this.price; }
 }
 
 class MainDish extends Food {
+
     private String mainMeal, accompaniments;
 
     public MainDish() {
-        ;
+        this.mainMeal = "";
+        this.accompaniments = "";
     }
 
     public String toString(){
-        return "";
+        return (super.nameToString() + "\n\t\t\t" + this.mainMeal
+                + "\n\t\t\t" + this.accompaniments + super.priceToString());
     }
 
     public void setMainMeal(String mainMeal) {
@@ -175,8 +215,13 @@ class MainDish extends Food {
     }
 
     @Override
-    void setPrice(double price) {
-        super.setPrice(price);
+    public double getPrice() {
+        return super.getPrice();
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
     }
 }
 
@@ -186,8 +231,8 @@ class Drink extends Food {
     }
 
     public String toString(){
-        return "";
-    };
+        return (super.nameToString() + super.priceToString());
+    }
 
     @Override
     void setName(String name) {
@@ -195,49 +240,75 @@ class Drink extends Food {
     }
 
     @Override
-    void setPrice(double price) {
-        super.setPrice(price);
+    public double getPrice() {
+        return super.getPrice();
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
     }
 }
 
 class Dessert extends Food {
+
     private String description;
+
     public Dessert() {
-        ;
+        this.description = "";
     }
 
     public String toString(){
-        return "";
-    };
+        return (super.nameToString() + "\n\t\t\t" + this.description + super.priceToString());
+    }
 
     public void setDescription(String description) {
         this.description = description;
     }
-}
 
+    @Override
+    public double getPrice() {
+        return super.getPrice();
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
+    }
+}
 
 class Combo {
     //Combine Main Dish, Drink, Dessert
-    private int mainDish;
-    private int drink;
-    private int dessert;
-    private double ComboPrice;
+    private MainDish mainDish;
+    private Drink drink;
+    private Dessert dessert;
+    private double comboPrice;
+    private double discount;
 
-    public Combo(MainDish mainDish, Drink drink, Dessert dessert) {
+    public Combo(MainDish mainDish, Drink drink, Dessert dessert, double discount) {
         this.mainDish = mainDish;
-        this.
+        this.drink = drink;
+        this.dessert = dessert;
+        this.discount = discount;
+        this.comboPrice = this.calculateComboPrice();
     }
 
     private double calculateComboPrice(){
         // Get the price of the combo
-        return 0.00;
+        return this.mainDish.getPrice() + this.drink.getPrice()
+                + this.dessert.getPrice() - this.calculateComboDiscount();
     }
 
     private double calculateComboDiscount(){
-        return 0.00;
+        return this.discount;
     }
 
     public String toString(){
-        return "";
-    };
+
+        return ("\n\n\t" + this.mainDish.getName() + " + "
+                + this.drink.getName() + " + " + this.dessert.getName()
+                + "\n\t\t$" + String.format("%.2f", this.comboPrice));
+    }
 }
+
+

@@ -12,6 +12,8 @@
 
 - **ClassesObjectsAndMethods**: explain the differences between classes, objects and methods.
 
+- **RandomNumbers**: generates random numbers and stores them in an array (used in _L3Activity5_).
+
 ***
 
 ## Lesson 2

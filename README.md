@@ -70,16 +70,22 @@ ___
 
 - **ScannerFile**: Java implementation of file IO but more human-likely.
 
-- **SerializeObject**: Saves objects on files.
+- **SerializeObject**: saves objects on files.
 
 ___
 
-- **L3Activity1**: Make a list of lists or hashmap to classify the toys.
+- **L3Activity1**: make a list of lists or hashmap to classify the toys.
 Then sort the list of lists or hashmap ascendingly and print each value.
 
-- **L3Activity2**: Find duplicate values of an array and remove them.
+- **L3Activity2**: find duplicate values of an array and remove them.
 Then, print the new array without the duplicated values.
 
 - **L3Acitivity4**: practice file IO functionalities.
 
 - **L3Activity5**: practice SOLID principles.
+
+***
+
+# Lesson 4
+
+- **LambdaExpressions**: implementation of Lambda expressions.

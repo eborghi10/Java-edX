@@ -89,3 +89,7 @@ Then, print the new array without the duplicated values.
 # Lesson 4
 
 - **LambdaExpressions**: implementation of Lambda expressions.
+
+- **Streams**: filtering and sorting examples using lambda expressions and streams.
+
+- **FunctionalInterfaces**: 

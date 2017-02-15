@@ -92,4 +92,8 @@ Then, print the new array without the duplicated values.
 
 - **Streams**: filtering and sorting examples using lambda expressions and streams.
 
-- **FunctionalInterfaces**: 
+- **FunctionalInterfaces**: practice of functional interfaces with Lambda expressions.
+
+- **ConcurrencyAndThreads**: overview of concurrency between two threads.
+
+- **MultiThreading**: example of multi threading in a restaurant.

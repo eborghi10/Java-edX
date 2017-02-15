@@ -99,3 +99,11 @@ Then, print the new array without the duplicated values.
 - **MultiThreading**: example of multi threading in a restaurant.
 
 - **ExceptionHandling**: handling custom exceptions.
+
+___
+
+- **L4Activity2**: Lesson 4 Exercises, Streams and Lambda expressions.
+
+- **L4Activity4**: Practice Functional Interfaces and Lambda Expressions, creating an app for a Technology Store.
+
+- **L4Activity5**:

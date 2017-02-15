@@ -97,3 +97,5 @@ Then, print the new array without the duplicated values.
 - **ConcurrencyAndThreads**: overview of concurrency between two threads.
 
 - **MultiThreading**: example of multi threading in a restaurant.
+
+- **ExceptionHandling**: handling custom exceptions.

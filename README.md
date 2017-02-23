@@ -106,4 +106,11 @@ ___
 
 - **L4Activity4**: Practice Functional Interfaces and Lambda Expressions, creating an app for a Technology Store.
 
-- **L4Activity5**:
+- **L4Activity5**: multithreading example of a movie theater.
+
+***
+
+# Lesson 5
+
+- **echoClient**: creates an echo connection.
+- **echoServer**: the second part of the project.

@@ -284,7 +284,6 @@ class Attender extends Thread {
          * Checks if there is a customer to attend.
          * Uses the FoodStock class in PARALLEL with the Chef.
          */
-//        int timeToDecide = 0;
         Customer customer;
 
         while(this.threadAlive){

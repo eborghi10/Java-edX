@@ -1,10 +1,7 @@
 package edu.galileo;
 
 import java.io.*;
-import java.util.List;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.text.DecimalFormat;
@@ -22,28 +19,38 @@ public class Main {
         Scanner input = null;
 
         try {
-            input = new Scanner(
-                    new BufferedReader(
-                            new FileReader(filePath)));
-            while(input.hasNext()) {
-                System.out.println(input.nextLine());
-                /*
-                String[] attributes = input.nextLine().split(" ");
-                System.out.println(attributes);
+            input = new Scanner(new BufferedReader(new FileReader(filePath)));
 
-                technologyStore = new LinkedList<>(
-                        Arrays.asList(
-                                new Product(
-                                        Integer.valueOf(attributes[0]),
-                                        attributes[1],
-                                        attributes[2],
-                                        Float.parseFloat(attributes[3]),
-                                        Integer.valueOf(attributes[4])
-                                )
-                        )
-                );*/
+            int lines = 0;
+            int cols = 0;
+            String[][] attributes = new String[1][4];
+            while(input.hasNext()) {
+
+                String data = input.next();
+                if (data != null) {
+                        if (cols > 3) {
+                            cols = 0;
+                            attributes[][] = new String[4];
+                            lines++;
+                        }
+                    attributes[lines][cols] = data;
+                    lines++;
+                }
             }
-            System.out.println(technologyStore);
+            for (int i = 0; i < attributes[0].length; i++) {
+
+                List<Product> productList = Arrays.asList(
+                        new Product(
+                                Integer.valueOf(attributes[0][i]),
+                                attributes[1][i],
+                                attributes[2][i],
+                                Float.parseFloat(attributes[3][i]),
+                                Integer.valueOf(attributes[4][i])
+                        )
+                );
+
+            }
+            //technologyStore = new LinkedList<>(productList);
         } catch (FileNotFoundException e) {
             System.out.println("> File not found!");
         } finally {

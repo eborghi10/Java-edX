@@ -114,3 +114,11 @@ ___
 
 - **echoClient**: creates an echo connection.
 - **echoServer**: the second part of the project.
+
+- **URLPost**: connects to an URL and write to it.
+
+- **SAXParser**: uses the XML API (SAX).
+
+- **DOMParser**: parses an XML document and creates a list of students.
+
+- **JSONParser**: using Java API for JSON processing (JSONP).

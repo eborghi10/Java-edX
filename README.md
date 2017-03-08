@@ -122,3 +122,10 @@ ___
 - **DOMParser**: parses an XML document and creates a list of students.
 
 - **JSONParser**: using Java API for JSON processing (JSONP).
+
+___
+
+- **L5Activity1**: multiple client chat application using sockets.
+- **ChatClient**: clients for the _L5Activity1_.
+
+- **L5Activity2**: 
